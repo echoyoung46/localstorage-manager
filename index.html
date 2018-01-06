@@ -8,13 +8,21 @@
 	<title>Document</title>
 	<localsource data-local="local_base_css"></localsource>
 	<localsource data-local="local_resetcp_css"></localsource>
-    <localsource data-local="local_strategycenter_css"></localsource>
+	<localsource data-local="local_strategycenter_css"></localsource>
 </head>
 
 <body>
+	<p>localstorage test</p>
 	<localsource data-local="local_zepto_js"></localsource>
 	<localsource data-local="local_tgadshow_js"></localsource>
 	<script src="./src/localfile.js"></script>
+	<script defer>
+		setTimeout(function() {
+			console.log('index script');
+			console.log(Zepto);
+			console.log($('localsource').length);
+		}, 0);
+	</script>
 </body>
 
 </html>
